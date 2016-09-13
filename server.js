@@ -74,7 +74,35 @@ app.use(function (req, res, next) {
   next();
 });
 
+//===============ROUTES=================
 
+
+//displays the practice game page
+app.get('/nxclass', function(req, res){
+  res.render('nxclass');
+});
+
+//displays the easy game page
+app.get('/constitution', function(req, res){
+  res.render('constitution');
+});
+
+//displays the medium game page
+app.get('/galaxy', function(req, res){
+  res.render('galaxy');
+});
+
+//displays the hard game page
+app.get('/intrepid', function(req, res){
+  res.render('intrepid');
+});
+
+//displays the very hard game page
+app.get('/sovereign', function(req, res){
+  res.render('sovereign');
+});
+
+//=========================================
 
 app.use('/', routes);
 app.use('/users', users);
