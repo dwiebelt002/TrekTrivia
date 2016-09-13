@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/dwiebelt002/TrekTrivia#readme",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
     "express-validator": "^2.20.8",
     "mongodb": "^2.2.9",
     "mongoose": "^4.6.0",
