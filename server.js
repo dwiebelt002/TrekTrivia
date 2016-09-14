@@ -102,6 +102,11 @@ app.get('/sovereign', function(req, res){
   res.render('sovereign');
 });
 
+//displays the game over page if the timer goes to 0
+app.get('/gameover', function(req, res){
+  res.render('gameover');
+});
+
 //=========================================
 
 app.use('/', routes);
