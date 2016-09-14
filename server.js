@@ -11,8 +11,34 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/loginapp');
+// mongoose.connect('mongodb://localhost/trektrivia');
+
+//----------Database Configuration-----------------
+
+var databaseUri = 'mongodb://localhost/trektrivia'
+//-----------------------------------------------------
+
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
+
+//-------End of Database Configuration----------------------------------------------
+
 var db = mongoose.connection;
+
+//show any mongoose errors
+db.on('error', function(err) {
+  console.log('Mongoose Error:', err);
+});
+
+//once logged in to the db
+db.once('open', function() {
+  console.log('Mongoose connection successful!');
+});
+
+//----------------------------------------------------------
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -73,6 +99,9 @@ app.use(function (req, res, next) {
   res.locals.user = req.user || null;
   next();
 });
+
+
+//
 
 //===============ROUTES=================
 
