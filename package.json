@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/dwiebelt002/TrekTrivia/issues"
   },
+  "engines": {
+    "node": "4.1.1"
+  },
   "homepage": "https://github.com/dwiebelt002/TrekTrivia#readme",
   "dependencies": {
     "bcryptjs": "^2.3.0",
