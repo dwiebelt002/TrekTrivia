@@ -2,7 +2,7 @@
     <link href="css/sticky-footer.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <img src="http://www.gifmania.us/Animated-Gifs-TV-Series/Free-Animations-Science-Fiction-Tv-Series/Images-Star-Trek/Enterprise-Starship-Enterprise-Series/nx-01-enterprise2-36391.gif">
 
@@ -74,19 +74,20 @@ function gradeMe(form) {
 <div id="show-number"></div>
 <br>
 
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
   <script>
 
   document.write("Time Remaining")
   //countdown timer
-    var number = 150;
+    var number = 120;
     
     function run(){
       counter = setInterval(decrement, 1000);
     }
     function decrement(){
       number--;
-      $('#show-number').html('<h2>' + number + '</h2>');
+      $('#show-number').html('<h3>' + number + '</h3>');
       if (number === 0){
         window.location.href = ("/gameover")
       }
