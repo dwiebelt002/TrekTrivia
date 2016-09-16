@@ -5,12 +5,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<img src="https://bestanimations.com/Sci-Fi/StarTrek/star-trek-spaceship-animated4.gif">
+<img src="img/enterprise-classic.gif">
 
 <style>
 
   h1 {
     color: white;
+  }
+
+  h2 {
+    color: black;
   }
 
   p {
@@ -84,7 +88,7 @@ function gradeMe(form) {
     }
     function decrement(){
       number--;
-      $('#show-number').html('<h2>' + number + '</h2>');
+      $('#show-number').html('<h3>' + number + '</h3>');
       if (number === 0){
         window.location.href = ("/gameover")
       }
@@ -121,7 +125,7 @@ function gradeMe(form) {
 <div class="question">
 1) What is the purpose of the Vulcan ritual of Kolinahr?</div>
 <div class = "image">
-<img src = "/img/kolinahr.jpg" height="250" width= "450">
+<img src = "/img/kolinahr.jpg" height="250" width= "495">
 </div>
 <div class="selection">
 <input type="radio" value="a" name="question1">a) A purging of all emotion<br>
